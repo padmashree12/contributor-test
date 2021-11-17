@@ -5,7 +5,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: padmashree12/github-workflow-try@refdfdfd
+      - uses: padmashree12/github-workflow-try@fgfgfgfgfgf
         with:
           repo: ${{ github.repository }}
         name: 'Update a projects CONTRIBUTORS file'
