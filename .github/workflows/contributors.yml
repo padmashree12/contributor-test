@@ -10,4 +10,4 @@ steps:
 run: PATH/run.sh
 shell: bash
 with:
-password: ${{ secrets.ACCESS_TOKEN }}
+password: ${{ secrets.GITHUB_TOKEN  }}
