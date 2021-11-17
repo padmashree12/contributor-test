@@ -1,13 +1,15 @@
-name: run-script
-on: push
-
+name: Update CONTRIBUTORS file
+on:
+  push
 jobs:
-run:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v1
-- name: script
-run: PATH/run.sh
-shell: bash
-with:
-password: ${{ secrets.GITHUB_TOKEN  }}
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: padmashree12/github-workflow-try@fdfdfdfdf
+        name: 'Update a projects CONTRIBUTORS file'
+      - name: Update resources
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: 'CONTRIBUTORS.md'
+          commit-msg: Update Contributors
+          github-token: ${{ secrets.GITHUB_TOKEN }}
