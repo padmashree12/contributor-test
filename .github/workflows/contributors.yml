@@ -15,7 +15,7 @@ jobs:
         with:
           file-path: 'CONTRIBUTORS.md'
           commit-msg: Update Contributors
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.TOKEN }}
         env:
           CONTRIB_REPOSITORY: 'padmashree12/contributor-test'
           CONTRIB_OUTPUT_FILE: 'CONTRIBUTORS.md'
