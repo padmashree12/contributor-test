@@ -1,21 +1,13 @@
-name: Update CONTRIBUTORS file
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+name: run-script
+on: push
+
 jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: minicli/action-contributors@v3
-        name: "Update a projects CONTRIBUTORS file"
-      - name: Commit changes
-        uses: test-room-7/action-update-file@v1
-        with:
-          file-path: 'CONTRIBUTORS.md'
-          commit-msg: Update Contributors
-          github-token: ${{ secrets.TOKEN }}
-        env:
-          CONTRIB_REPOSITORY: 'padmashree12/contributor-test'
-          CONTRIB_OUTPUT_FILE: 'CONTRIBUTORS.md'
+run:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v1
+- name: script
+run: PATH/run.sh
+shell: bash
+with:
+password: ${{ secrets.ACCESS_TOKEN }}
